@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="row" >
+            <div class="col-sm-1">id</div>
+            <div class="col-sm-2">merk</div>
+            <div class="col-sm-2">type</div>
+            <div class="col-sm-1">pk</div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row" *ngFor="let car of cars" (click)="getCar(car)">
+            <div class="col-sm-1">{{car.id}}</div>
+            <div class="col-sm-2">{{car.merk}}</div>
+            <div class="col-sm-2">{{car.type}}</div>
+            <div class="col-sm-1">{{car.pk}}</div>
+            <div class="col-sm-1"><span class="badge">{{car.rating}}</span></div>
+        </div>
+    </div>
+
+    <div class="col-sm-6" *ngIf=selectedCar>
+        <app-car-detail [car]="selectedCar" (rating)="updateRating($event)"></app-car-detail>
+    </div>
+</div>

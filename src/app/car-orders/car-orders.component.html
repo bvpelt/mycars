@@ -1,0 +1,20 @@
+<div [hidden]="orders.length==0">
+    <h2>Orders</h2>
+    <div class="row">
+        <div class="col-sm-1">id</div>
+        <div class="col-sm-2">merk</div>
+        <div class="col-sm-2">type</div>
+        <div class="col-sm-1">pk</div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row" *ngFor="let car of orders; let i=index">
+        <div class="col-sm-1">{{car.id}}</div>
+        <div class="col-sm-2">{{car.merk}}</div>
+        <div class="col-sm-2">{{car.type}}</div>
+        <div class="col-sm-1">{{car.pk}}</div>
+        <!--
+        <button type="button" class="btn btn-outline-primary btn-sm" (click)="cancelorder(car,i)">x</button>
+        -->
+        <button type="button" (click)="cancelorder(car,i)"><span class="badge badge-primary">X</span></button>
+    </div>
+</div>

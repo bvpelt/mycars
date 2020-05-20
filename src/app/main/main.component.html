@@ -1,0 +1,16 @@
+<div class="container-sm">
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h1>Cars Demo</h1>
+    </div>
+    <div class="content">
+        <nav>
+            <a routerLink='home' class="btn btn-primary">list</a>
+            <a routerLink='add' class="btn btn-primary">toevoegen</a>
+            <a routerLink='orders' class="btn btn-primary">orders</a>
+            <a routerLink='details' class="btn btn-primary">details</a>
+        </nav>
+        <div class="routercontent">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

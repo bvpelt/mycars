@@ -1,0 +1,19 @@
+<div width=100% *ngIf="car">
+
+    <h2>Car details</h2>
+
+    <div class="row">
+        <button type="button" class="btn btn-outline-primary" (click)="increment()"><img
+                src="../assets/images/thumbs-up.png" width="30px" height="30px"></button>
+        <button type="button" class="btn btn-outline-primary" (click)="decrement()"><img
+                src="../assets/images/thumbs-down.jpg" width="30px" height="30px"></button>
+        <button type="button" class="btn btn-outline-primary" (click)="booknow(car)">Boek nu</button>
+    </div>
+    <div class="row">
+        <div class="col-sm-1">{{car.id}}</div>
+        <div class="col-sm-2">{{car.merk}}</div>
+        <div class="col-sm-2">{{car.type}}</div>
+        <div class="col-sm-1">{{car.pk}}</div>
+    </div>
+    <img src="{{car.image}}" class="myimage rounded img-fluid" alt="{{car.merk}} {{car.type}}" />
+</div>
